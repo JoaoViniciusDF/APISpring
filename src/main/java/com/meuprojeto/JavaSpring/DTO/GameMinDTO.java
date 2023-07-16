@@ -1,6 +1,7 @@
 package com.meuprojeto.JavaSpring.DTO;
 
 import com.meuprojeto.JavaSpring.entities.Game;
+import com.meuprojeto.JavaSpring.projections.GameMinProjection;
 
 public class GameMinDTO {
 
@@ -20,6 +21,16 @@ public class GameMinDTO {
 		year = entity.getYear();
 		imgUrl = entity.getImgUrl();
 		shortDescription = entity.getShortDescriprion();
+		
+	}
+	
+	public GameMinDTO(GameMinProjection projection) {
+		
+		id = projection.getId();
+		title = projection.getTitle();
+		year = projection.getYear();
+		imgUrl = projection.getImgUrl();
+		shortDescription = projection.getShortDescriprion();
 		
 	}
 
